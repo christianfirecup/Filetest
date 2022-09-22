@@ -1,16 +1,21 @@
 package test;
 import  test.item;
+import test.inter.playerlocation;
+import test.menu;
 import java.util.Random;
-public class sworditem extends item {
+public class sworditem extends item{
     public String Rdisplay;
     public static final String ANSI_YELLOW = "\\u001B[47m";
     public int rareselect = 0;
     public static void oncall() {
         sworditem call = new sworditem();
-
+        playerdata loc = new playerdata();
         call.damage();
         call.Rareity();
         call.itemdesc();
+        call.Mat();
+        loc.location();
+
     }
 
    public Random rand = new Random();
@@ -30,6 +35,7 @@ public class sworditem extends item {
           rareselect = 0;
             return Rareityset;
         }
+
 
 
 
