@@ -5,49 +5,53 @@ import java.util.Random;
 public class sworditem extends item {
     public playerdata loc = new playerdata();
     public String Locationg = loc.location();
-    public String Rdisplay;
+
+
+
+    public String Rdisplay(){
+
+        return Rdisplay();
+    }
     public static final String ANSI_YELLOW = "\\u001B[47m";
     public int stackamount(){
         return 1;
     }
     public int rareselect = 0;
-    public void oncall() {
-        sworditem call = new sworditem();
+    public void onpickup() {
+
         playerdata loc = new playerdata();
-        call.damage();
-        call.Rareity();
+        Rareity();
         loc.location();
-        call.itemdesc();
+        itemdesc();
 
     }
 
    public Random rand = new Random();
-    @Override
-    public int damage(){
-        return 0;
-    }
+
     public void itemdesc(){
-        if(rareselect == 0){
+
             playerdata loc = new playerdata();
             System.out.println("ITEM STAT: Common");
-            System.out.println(damage() + " " + rareselect + " " + Locationg);
+            System.out.println( " " + rareselect + " " + Locationg);
 
-        }
+
         }
         @Override
         public int Rareity(){
-          int Rareityset = rand.nextInt(4);
-          rareselect = 0;
-            return Rareityset;
+          int Rareityset = rand.nextInt(5);
+          rareselect = Rareityset;
+            return rareselect;
         }
+        @Override
     public String Mat(){
-        return "blank";
+        return "Wood";
+    }
+    @Override
+    public int maxCount(){
+        return 1;
     }
 
-    @Override
-    public String Name() {
-        return super.Name();
-    }
+
 
     @Override
     public final boolean IsFood(){
@@ -55,6 +59,7 @@ public class sworditem extends item {
     }
     @Override
     public boolean IsEnchanted(){
+
         return false;
     }
 
