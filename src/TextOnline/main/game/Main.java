@@ -1,6 +1,6 @@
-package test;
+package TextOnline.main.game;
 
-import test.menu;
+import TextOnline.main.game.menus.menu;
 
 class Main {
     public static void main(String[] args) {
@@ -8,7 +8,7 @@ class Main {
     }
 
     public static void onin() {
-        test.menu.menutest();
+        menu.menutest();
 
     }
 }

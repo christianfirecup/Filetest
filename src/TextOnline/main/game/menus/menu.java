@@ -1,5 +1,5 @@
-package test;
-import test.sworditem;
+package TextOnline.main.game.menus;
+
 public class menu {
     public String location(){
         return "work";
@@ -7,6 +7,5 @@ public class menu {
 
     public static void menutest() {
         System.out.println("Menu Options:");
-        sworditem.oncall();
     }
 }
