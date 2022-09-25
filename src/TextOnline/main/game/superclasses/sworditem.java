@@ -3,14 +3,41 @@ import TextOnline.main.game.player.playerdata;
 
 import java.util.Random;
 public class sworditem extends item {
+    public sworditem(){
+        playerdata loc = new playerdata();
+        Rareity();
+        loc.location();
+        itemdesc();
+
+
+    }
+    public void objectcreation(){
+
+    }
     public playerdata loc = new playerdata();
     public String Locationg = loc.location();
 
-
+    @Override
+    public String name() {
+        return super.name();
+    }
 
     public String Rdisplay(){
+        String choice = null;
+        if(Rareity() == 0){
+            choice = "Common";
+        }else if(Rareity() == 1){
+            choice = "Uncommon";
+        }else if(Rareity() == 2){
+            choice = "Rare ";
+        }else if(Rareity() == 3){
+            choice = "Very Rare";
+        }else if(Rareity() == 4){
+            choice = "Legendary";
+        }
 
-        return Rdisplay();
+        return choice;
+
     }
     public static final String ANSI_YELLOW = "\\u001B[47m";
     public int stackamount(){
@@ -40,7 +67,7 @@ public class sworditem extends item {
         public int Rareity(){
           int Rareityset = rand.nextInt(5);
           rareselect = Rareityset;
-            return rareselect;
+            return Rareityset;
         }
         @Override
     public String Mat(){

@@ -5,8 +5,16 @@ public class playerdata {
         return 0;
     }
     public String location(){
-        String loc = "work";
 
-        return loc;
+
+        return "blank";
+    }
+    public int saturation(){
+        int maxsat = 15;
+        if(maxsat > 15){
+            maxsat = 15;
+
+        }
+        return maxsat;
     }
 }

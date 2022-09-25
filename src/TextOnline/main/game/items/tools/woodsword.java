@@ -1,13 +1,13 @@
 package TextOnline.main.game.items.tools;
+import TextOnline.main.game.player.playerdata;
 import TextOnline.main.game.superclasses.sworditem;
 public class woodsword extends sworditem{
 
-    public woodsword(String Name) {
-        super(Name);
-    }
-
+       public woodsword(){
+           System.out.println("hi item is here!");
+       }
     @Override
-    public String Name() {
+    public String name() {
         return Rdisplay() +" Wood Sword";
     }
 
@@ -28,6 +28,15 @@ public class woodsword extends sworditem{
 
     @Override
     public String Rdisplay() {
-        return "Unknown";
+
+       return super.Rdisplay();
+    }
+
+    @Override
+    public void itemdesc() {
+        playerdata loc = new playerdata();
+        System.out.println(name());
+        System.out.println( " " + rareselect + " " + Locationg + " " + Rareity());
+
     }
 }
