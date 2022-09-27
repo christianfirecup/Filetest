@@ -1,4 +1,4 @@
-package TextOnline.main.game;
+package TextOnline;
 
 import TextOnline.main.game.menus.menu;
 
