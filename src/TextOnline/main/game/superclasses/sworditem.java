@@ -101,12 +101,35 @@ public class sworditem extends item {
 
     @Override
     public int damage() {
-        int damageamount;
+        int damageamount = 0;
+        if (Rareityset == 0) {
+            damageamount = damageamount + 2;
+
+        } else if (Rareityset == 1) {
+            damageamount = damageamount + 3;
+
+        } else if (Rareityset == 2) {
+            damageamount = damageamount + 3;
+
+        } else if (Rareityset == 3) {
+            damageamount = damageamount+ 5;
+
+        } else if (Rareityset == 4) {
+            damageamount =damageamount+ 6;
+
+        }else{
+            damageamount =damageamount+ 2;
+
+        }
+        return damageamount;
+    }
+    public  int damagemulti(){
+        int damageamount = 0;
         if (Rareityset == 0) {
             damageamount = 2;
 
         } else if (Rareityset == 1) {
-            damageamount = 3;
+            damageamount =  3;
 
         } else if (Rareityset == 2) {
             damageamount = 4;
@@ -115,13 +138,13 @@ public class sworditem extends item {
             damageamount = 5;
 
         } else if (Rareityset == 4) {
-            damageamount = 6;
+            damageamount =6;
 
         }else{
-            damageamount = 2;
+            damageamount =2;
 
         }
-        return damageamount;
+    return  damageamount;
     }
 }
 

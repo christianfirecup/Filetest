@@ -1,12 +1,10 @@
 package TextOnline.main.game.items.tools;
-import TextOnline.main.game.player.playerdata;
-import TextOnline.main.game.superclasses.sworditem;
-public class woodsword extends sworditem{
-
+import  TextOnline.main.game.superclasses.sworditem;
+public class stonesword extends sworditem  {
 
     @Override
     public String name() {
-        return "Wood Sword";
+        return "Stone Sword";
     }
 
     @Override
@@ -27,17 +25,17 @@ public class woodsword extends sworditem{
     @Override
     public String Rdisplay() {
 
-       return super.Rdisplay();
+        return super.Rdisplay();
     }
 
     @Override
     public String Mat() {
-        return "Wood";
+        return "Stone";
     }
 
     @Override
     public int damage() {
-        int send = damagemulti() + 2;
+       int send = damagemulti() + 3;
         return send;
     }
 

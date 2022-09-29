@@ -30,6 +30,7 @@ public class playerdata {
        for (int x =0; x<5; x++){
            itemloaders load = new itemloaders();
            Itemsinv.add(load.addwood);
+           Itemsinv.add(load.addstone);
        }
         Itemsinv.get(0).itemdesc();
         Itemsinv.get(1).itemdesc();
