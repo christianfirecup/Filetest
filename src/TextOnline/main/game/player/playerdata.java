@@ -5,6 +5,7 @@ import TextOnline.main.game.items.tools.woodsword;
 import TextOnline.main.game.superclasses.item;
 
 
+import java.time.temporal.ValueRange;
 import java.util.ArrayList;
 
 public class playerdata {
@@ -25,29 +26,50 @@ public class playerdata {
         return maxsat;
     }
     public static ArrayList<item> Itemsinv= new ArrayList<item>();
-    public void invopen(){
+    public static void invopen(){
 
 
 
-       for (int x =0; x<5; x++){
-           itemloaders.woodswordadd();
 
 
-       }
-        Itemsinv.get(0).itemdesc();
-        Itemsinv.get(1).itemdesc();
-        Itemsinv.get(2).itemdesc();
-        Itemsinv.get(3).itemdesc();
-        Itemsinv.get(4).itemdesc();
-        Itemsinv.get(0).itemdesc();
+
+
+
+
 
     }
 
-    public class itemloaders {
+    public class invfunctions {
+            public static int gameitemchoice;
 
             public static void woodswordadd(){
-                item addwood = new woodsword();
-                Itemsinv.add(addwood);
+                if(ValueRange.of(0, 10).isValidIntValue(gameitemchoice)) {
+                    switch (gameitemchoice){
+                        case 1:
+                            item addwood = new woodsword();
+                            Itemsinv.add(addwood);
+                            break;
+                        case 2:
+                            System.out.println("Tuesday");
+                            break;
+                        case 3:
+                            System.out.println("Wednesday");
+                            break;
+                        case 4:
+                            System.out.println("Thursday");
+                            break;
+                        case 5:
+                            System.out.println("Friday");
+                            break;
+                        case 6:
+                            System.out.println("Saturday");
+                            break;
+                        case 7:
+                            System.out.println("Sunday");
+                            break;
+                    }
+
+                }
             }
 
         public item addstone = new stonesword();
