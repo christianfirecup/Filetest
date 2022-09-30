@@ -3,7 +3,7 @@ import TextOnline.main.game.player.playerdata;
 public class fooditem extends item{
 
     @Override
-    public int damage() {
+    public double damage() {
         return -1;
     }
 

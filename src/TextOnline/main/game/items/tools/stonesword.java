@@ -14,7 +14,7 @@ public class stonesword extends sworditem  {
 
     @Override
     public int Durab() {
-        return 50;
+        return 175;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class stonesword extends sworditem  {
     }
 
     @Override
-    public int damage() {
+    public double damage() {
        int send = damagemulti() + 3;
         return send;
     }

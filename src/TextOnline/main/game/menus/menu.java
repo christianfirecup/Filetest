@@ -1,20 +1,20 @@
 package TextOnline.main.game.menus;
-import TextOnline.main.game.items.tools.woodsword;
-import TextOnline.main.game.superclasses.sworditem;
-import java.util.ArrayList;
-import TextOnline.main.game.superclasses.item;
-import TextOnline.main.game.player.Inventory;
 import TextOnline.main.game.player.playerdata;
 import TextOnline.main.game.player.playerdata.invfunctions;
+import java.util.Scanner;
 
 public class menu {
 public String clonename(){
     return "hello";
 }
     public static void menutest() {
-    invfunctions.gameitemchoice = 1;
-        invfunctions.woodswordadd();
-            playerdata.Itemsinv.get(0).itemdesc();
+    for(int i = 0; i<5; i++) {
+        Scanner lmaohaha = new Scanner(System.in);
+        System.out.println("Pick a number for test");
+        invfunctions.gameitemchoice = lmaohaha.nextInt();
+        invfunctions.bswordadd();
+        playerdata.Itemsinv.get(invfunctions.gameitemchoice - 1).itemdesc();
+    }
 
 
 

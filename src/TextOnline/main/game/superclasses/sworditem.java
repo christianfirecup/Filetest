@@ -100,8 +100,8 @@ public class sworditem extends item {
     }
 
     @Override
-    public int damage() {
-        int damageamount = 0;
+    public double damage() {
+        double damageamount = 0;
         if (Rareityset == 0) {
             damageamount = damageamount + 2;
 

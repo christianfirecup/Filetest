@@ -1,11 +1,8 @@
 package TextOnline.main.game.player;
-
-import TextOnline.main.game.items.tools.stonesword;
-import TextOnline.main.game.items.tools.woodsword;
 import TextOnline.main.game.superclasses.item;
+import TextOnline.main.game.items.tools.*;
 
 
-import java.time.temporal.ValueRange;
 import java.util.ArrayList;
 
 public class playerdata {
@@ -42,7 +39,7 @@ public class playerdata {
     public class invfunctions {
             public static int gameitemchoice;
 
-            public static void woodswordadd(){
+            public static void bswordadd(){
                     switch (gameitemchoice){
                         case 1:
                             item addwood = new woodsword();
@@ -53,7 +50,8 @@ public class playerdata {
                             Itemsinv.add(addstone);
                             break;
                         case 3:
-                            System.out.println("Wednesday");
+                            item addgrass = new GrassSword();
+                            Itemsinv.add(addgrass);
                             break;
                         case 4:
                             System.out.println("Thursday");
@@ -72,7 +70,7 @@ public class playerdata {
 
             }
 
-        public item addstone = new stonesword();
+
 
     }
 }

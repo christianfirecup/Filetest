@@ -10,7 +10,7 @@ public class item {
     public int Durab(){
        return Durab();
     }
-    public int damage(){
+    public double damage(){
        return damage();
     }
     public String name(){
