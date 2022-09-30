@@ -1,8 +1,9 @@
 package TextOnline.main.game.player;
 
+import TextOnline.main.game.items.tools.stonesword;
 import TextOnline.main.game.items.tools.woodsword;
 import TextOnline.main.game.superclasses.item;
-import TextOnline.main.game.loaders.itemloaders;
+
 
 import java.util.ArrayList;
 
@@ -23,14 +24,15 @@ public class playerdata {
         }
         return maxsat;
     }
+    public static ArrayList<item> Itemsinv= new ArrayList<item>();
     public void invopen(){
 
-        ArrayList<item> Itemsinv= new ArrayList<item>();
+
 
        for (int x =0; x<5; x++){
-           itemloaders load = new itemloaders();
-           Itemsinv.add(load.addwood);
-           Itemsinv.add(load.addstone);
+           itemloaders.woodswordadd();
+
+
        }
         Itemsinv.get(0).itemdesc();
         Itemsinv.get(1).itemdesc();
@@ -38,6 +40,17 @@ public class playerdata {
         Itemsinv.get(3).itemdesc();
         Itemsinv.get(4).itemdesc();
         Itemsinv.get(0).itemdesc();
+
+    }
+
+    public class itemloaders {
+
+            public static void woodswordadd(){
+                item addwood = new woodsword();
+                Itemsinv.add(addwood);
+            }
+
+        public item addstone = new stonesword();
 
     }
 }
