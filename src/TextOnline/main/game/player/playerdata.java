@@ -43,14 +43,14 @@ public class playerdata {
             public static int gameitemchoice;
 
             public static void woodswordadd(){
-                if(ValueRange.of(0, 10).isValidIntValue(gameitemchoice)) {
                     switch (gameitemchoice){
                         case 1:
                             item addwood = new woodsword();
                             Itemsinv.add(addwood);
                             break;
                         case 2:
-                            System.out.println("Tuesday");
+                            item addstone = new stonesword();
+                            Itemsinv.add(addstone);
                             break;
                         case 3:
                             System.out.println("Wednesday");
@@ -69,7 +69,7 @@ public class playerdata {
                             break;
                     }
 
-                }
+
             }
 
         public item addstone = new stonesword();
